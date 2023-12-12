@@ -23,7 +23,7 @@ router.get('/reg', (req, res) => {
 router.get('/logout', async (req, res) => {
   req.session.destroy();
   res.clearCookie('user_sid');
-  res.redirect('/');
+  return res.redirect('/');
 });
 
 export default router;
